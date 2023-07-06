@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.mainContainer {
+    width: 80%;
+    height: 90%;
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 120px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 380px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: lightskyblue;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.image {
+    width: 130px;
+    height: auto;
+    object-fit: cover;
+}
+
+.type {
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+}
