@@ -5,12 +5,9 @@ async function loadPokemons() {
     let response = await fetch(url);
     let responseAsJson = await response.json();
     let pokemons = responseAsJson['results'];
-
     //console.log('API answer: ', responseAsJson);
-    console.log('Pokemon results: ', pokemons);
-
+    //console.log('Pokemon results: ', pokemons);
     loadSinglePokemon(pokemons);
-
 }
 
 async function loadSinglePokemon(pokemons) {
@@ -45,6 +42,7 @@ function renderPokemonName(singlePokemonName, i, currentPokemon) {
             <div id="cardBelow${i}" class="cardBelow"> <div>
         </div>
     `;
+    pokemonNamesArray.push(singlePokemonName); //Alle Pokemon Namen ins Array speichern
 }
 
 function renderPokemonImage(currentPokemon, i) {
@@ -137,4 +135,13 @@ function fairyCard(i) {
 
 function normalCard(i) {
     document.getElementById(`card${i}`).style.background = '#A8A77A';
+}
+
+function hideFilterOverlay() {
+    document.body.style = "overflow: visible";
+    document.getElementById('filteredPokemonContainer').innerHTML = '';
+    document.getElementById('filterPokemon').classList.add('d-none');
+    document.getElementById('backArrow').classList.add('d-none');
+    document.getElementById('backArrow').style.zIndex = "0";
+    filteredPokemon = [];
 }

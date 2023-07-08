@@ -6,6 +6,7 @@ async function showPokemonCard(singlePokemonName) {
     let response = await fetch(Url_SinglePokemon);
     pokemon = await response.json();
 
+    hideFilterOverlay();
     renderPokemonCard(pokemon);
 }
 
@@ -21,7 +22,7 @@ function renderSingleImageAndId(pokemon) {
     document.getElementById('pokemonCardAbove').innerHTML = '';
     document.getElementById('pokemonCardAbove').innerHTML = `
     <div class="aboveTopContainer">
-        <div class="pointer" onclick="closeOverLay()"><img class="backArrow" src="img/arrow-left.png">Pokedex</div>
+        <div class="pointer" onclick="closeOverLay()"><img class="arrowBack" src="img/arrow-left.png">Pokedex</div>
         <div>#${pokemonId}</div>
     </div>
     <img class="singlePokemonImage" src="${pokemonImage}">
@@ -78,11 +79,14 @@ function renderPropertyProgressbar(pokemon) {
     for (let j = 0; j < (pokemonStats.length && color.length) ; j++) {
         let stat = pokemonStats[j];
         let baseStat = stat['base_stat'];
+        if(baseStat >= 100){
+            baseStat = 100;
+        }
         let progressValue = baseStat;
-
+        //console.log('%: ', baseStat);
         let statName = stat['stat']['name'];
         let statNameArray = statName.split('-');
-        console.log('array:', statNameArray);
+        //console.log('array:', statNameArray);
         let Statics;
         if (statNameArray[0] && statNameArray[1]) {
             Statics = statNameArray[0].slice(0, 3) + '-' + statNameArray[1].slice(0, 3);
@@ -90,9 +94,6 @@ function renderPropertyProgressbar(pokemon) {
         else {
             Statics = statNameArray[0].slice(0, 2);
         }
-
-        
-
         document.getElementById('pokemonCardBelow').innerHTML += `
         <div class="propertyContainer">
         <div>${Statics.toUpperCase()}</div>
