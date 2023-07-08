@@ -7,6 +7,39 @@ body {
     text-align: center;
 }
 
+.d-none {
+    display: none !important;
+}
+
+h1 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+.mg-btn-20 {
+    margin-bottom: 20px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.backArrow{
+    width: 20px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.header h1 {
+    margin: 30px;
+    font-weight: 800;
+    font-size: 50px;
+}
+
 .mainContainer {
     width: 80%;
     height: 90%;
@@ -26,7 +59,7 @@ body {
     justify-content: space-between;
     width: 200px;
     height: 380px;
-    border: 2px solid white;
+    border: 2px solid lightgray;
     border-radius: 10px;
     background-color: lightskyblue;
     padding-top: 20px;
@@ -39,10 +72,168 @@ body {
     object-fit: cover;
 }
 
-.type {
+/*.type {
     margin: 5px;
     padding: 3px;
     border: 1px solid black;
     border-radius: 5px;
     color: white;
+}*/
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemonCard {
+    position: relative;
+    width: 400px;
+    height: 700px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: lightslategray;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemonCardAbove {
+    box-sizing: border-box;
+    width: 100%;
+    height: 34%;
+    background: aqua;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.aboveTopContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.singlePokemonImage{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pokemonCardMiddle {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.typeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 10px;
+}
+
+.typeBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 25px;
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.weightHeightContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 140px;
+    margin-top: 10px;
+}
+
+.weight {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+    justify-content: center;
+}
+
+.height {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemonCardBelow {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemonCardBelow h1 {
+    margin-bottom: 20px;
+}
+
+.propertyContainer {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.progress-container {
+    box-sizing: border-box;
+    position: relative;
+    height: 20px;
+    width: 250px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.progress-bar::after {
+    content: attr(data-label);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
 }
