@@ -148,72 +148,72 @@ function fillColorPokemonType(type) {
 
 function grass(type) {
     document.getElementById(`typeContainer`).innerHTML += `
-    <div class="typeBox textCenter" style="background-color: green">${type}</div>
+    <div class="typeBox textCenter" style="background-color: #7AC74C">${type}</div>
     `;
-    document.getElementById('pokemonCardAbove').style.background = 'green';
+    document.getElementById('pokemonCardAbove').style.background = '#7AC74C';
 }
 
 function fire(type) {
     document.getElementById(`typeContainer`).innerHTML += `
-    <div class="typeBox textCenter" style="background-color: red">${type}</div>
+    <div class="typeBox textCenter" style="background-color: #EE8130">${type}</div>
     `;
-    document.getElementById('pokemonCardAbove').style.background = 'red';
+    document.getElementById('pokemonCardAbove').style.background = '#EE8130';
 }
 
 function poison(type) {
     document.getElementById(`typeContainer`).innerHTML += `
-    <div class="typeBox textCenter" style="background-color: blueviolet">${type}</div>
+    <div class="typeBox textCenter" style="background-color: #A33EA1">${type}</div>
     `;
-    document.getElementById('pokemonCardAbove').style.background = 'blueviolet';
+    document.getElementById('pokemonCardAbove').style.background = '#A33EA1';
 }
 
 function flying(type) {
     document.getElementById(`typeContainer`).innerHTML += `
-    <div class="typeBox textCenter" style="background-color: lightblue">${type}</div>
+    <div class="typeBox textCenter" style="background-color: #A98FF3">${type}</div>
     `;
-    document.getElementById('pokemonCardAbove').style.background = 'lightblue';
+    document.getElementById('pokemonCardAbove').style.background = '#A98FF3';
 }
 
 function bug(type) {
     document.getElementById(`typeContainer`).innerHTML += `
-    <div class="typeBox textCenter" style="background-color: yellowgreen">${type}</div>
+    <div class="typeBox textCenter" style="background-color: #A6B91A">${type}</div>
     `;
-    document.getElementById('pokemonCardAbove').style.background = 'yellowgreen';
+    document.getElementById('pokemonCardAbove').style.background = '#A6B91A';
 }
 
 function water(type) {
     document.getElementById(`typeContainer`).innerHTML += `
-    <div class="typeBox textCenter" style="background-color: blue">${type}</div>
+    <div class="typeBox textCenter" style="background-color: #6390F0">${type}</div>
     `;
-    document.getElementById('pokemonCardAbove').style.background = 'blue';
+    document.getElementById('pokemonCardAbove').style.background = '#6390F0';
 }
 
 function elecktric(type) {
     document.getElementById(`typeContainer`).innerHTML += `
-    <div class="typeBox textCenter" style="background-color: yellow">${type}</div>
+    <div class="typeBox textCenter" style="background-color: #F7D02C">${type}</div>
     `;
-    document.getElementById('pokemonCardAbove').style.background = 'yellow';
+    document.getElementById('pokemonCardAbove').style.background = '#F7D02C';
 }
 
 function ground(type) {
     document.getElementById(`typeContainer`).innerHTML += `
-    <div class="typeBox textCenter" style="background-color: gray">${type}</div>
+    <div class="typeBox textCenter" style="background-color: #E2BF65">${type}</div>
     `;
-    document.getElementById('pokemonCardAbove').style.background = 'gray';
+    document.getElementById('pokemonCardAbove').style.background = '#E2BF65';
 }
 
 function fairy(type) {
     document.getElementById(`typeContainer`).innerHTML += `
-    <div class="typeBox textCenter" style="background-color: purple">${type}</div>
+    <div class="typeBox textCenter" style="background-color: #D685AD">${type}</div>
     `;
-    document.getElementById('pokemonCardAbove').style.background = 'purple';
+    document.getElementById('pokemonCardAbove').style.background = '#D685AD';
 }
 
 function normal(type) {
     document.getElementById(`typeContainer`).innerHTML += `
-    <div class="typeBox textCenter" style="background-color: lightgray">${type}</div>
+    <div class="typeBox textCenter" style="background-color: #A8A77A">${type}</div>
     `;
-    document.getElementById('pokemonCardAbove').style.background = 'lightgray';
+    document.getElementById('pokemonCardAbove').style.background = '#A8A77A';
 }
 
 
@@ -221,3 +221,4 @@ function closeOverLay() {
     document.getElementById('overLay').classList.add('d-none');
     document.body.style = "overflow: visible";
 }
+
