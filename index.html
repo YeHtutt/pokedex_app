@@ -28,12 +28,16 @@
 
     <div class="header">
         <h1>Pokedex</h1>
+        <div>
+            <input>
+            <button>serach</button>
+        </div>
     </div>
 
     <div id="mainContainer" class="mainContainer"> </div>
 
     <div id="overLay" class="overlay d-none" onclick="closeOverLay()">
-        <div id="pokemonCard" class="pokemonCard">
+        <div id="pokemonCard" class="pokemonCard" onclick="stopPropagation(event)">
             <div id="pokemonCardAbove" class="pokemonCardAbove"></div>
 
             <div id="pokemonCardMiddle" class="pokemonCardMiddle"></div>

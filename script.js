@@ -50,7 +50,7 @@ function renderPokemonName(singlePokemonName, i, currentPokemon) {
 function renderPokemonImage(currentPokemon, i) {
     let pokemonImage = currentPokemon['sprites']['other']['official-artwork']['front_shiny'];
     document.getElementById(`cardBelow${i}`).innerHTML += `
-    <img class="image" src="${pokemonImage}">
+    <img class="image" id="image${i}" src="${pokemonImage}">
     `;
 }
 

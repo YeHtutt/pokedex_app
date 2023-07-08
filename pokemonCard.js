@@ -1,7 +1,6 @@
 async function showPokemonCard(singlePokemonName) {
     document.body.style = "overflow: hidden";
     document.getElementById('overLay').classList.remove('d-none');
-    window.scrollTo(0, 0); // Nach oben scrollen
 
     let Url_SinglePokemon = `https://pokeapi.co/api/v2/pokemon/${singlePokemonName}`;
     let response = await fetch(Url_SinglePokemon);
@@ -222,3 +221,6 @@ function closeOverLay() {
     document.body.style = "overflow: visible";
 }
 
+function stopPropagation(event) {
+    event.stopPropagation();
+} 
