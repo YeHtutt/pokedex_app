@@ -72,7 +72,7 @@ function showFilteredPokemons(filteredPokemonName, singlePokemonName, responseAs
 function renderFilteredCards(singlePokemonName, i, responseAsJson, pokemonImage) {
     let pokemonId = responseAsJson['id'];
     document.getElementById('filteredPokemonContainer').innerHTML += /*html*/`
-        <div id="cardOverlay${i}" onclick="showPokemonCard('${singlePokemonName}')" class="card">
+        <div id="cardOverlay${i}" onclick="showPokemonCard('${singlePokemonName}')" class="cardOverlay">
             <div id="cardAbove${i}" class="cardAbove">
                 <div class="pokemonName"> <h2> ${singlePokemonName} </h2> </div>
                 <div class="textCenter mag-top-50"><b>#${pokemonId}</b></div>

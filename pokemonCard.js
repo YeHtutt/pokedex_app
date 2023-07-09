@@ -83,16 +83,24 @@ function renderPropertyProgressbar(pokemon) {
             baseStat = 100;
         }
         let progressValue = baseStat;
+
         //console.log('%: ', baseStat);
         let statName = stat['stat']['name'];
         let statNameArray = statName.split('-');
         //console.log('array:', statNameArray);
         let Statics;
         if (statNameArray[0] && statNameArray[1]) {
-            Statics = statNameArray[0].slice(0, 3) + '-' + statNameArray[1].slice(0, 3);
+            //Statics = statNameArray[0].slice(0, 3) + '-' + statNameArray[1].slice(0, 3);  
+            Statics = statNameArray[0].slice(0, 2) + statNameArray[1].slice(0, 2);
         }
-        else {
+        else if(statNameArray[0] && statName == 'hp'){
             Statics = statNameArray[0].slice(0, 2);
+        }
+        else if(statNameArray[0] && statName == 'defense') {
+            Statics = statNameArray[0].slice(0, 3);
+        }
+        else if (statNameArray[0]){
+            Statics = statNameArray[0].slice(0, 2) + statNameArray[0].charAt(statNameArray[0].length - 1);
         }
         document.getElementById('pokemonCardBelow').innerHTML += `
         <div class="propertyContainer">

@@ -24,12 +24,10 @@
     <div class="header">
         <h1>Pokedex</h1>
         <div class="searchContainer">
+            <button class="backArrow d-none" id="backArrow" onclick="hideFilterOverlay()"><img src="img/back_arrow_black.png"></button>
             <input id="inputField" class="input" type="text">
             <button class="searchBtn" onclick="loadPokemonsForFilter()">serach</button>
         </div>
-    </div>
-    <div class="headerBackArrow">
-        <button class="backArrow d-none" id="backArrow" onclick="hideFilterOverlay()"><img src="img/back_arrow_black.png"></button>
     </div>
 
     <div id="mainContainer" class="mainContainer"> </div>

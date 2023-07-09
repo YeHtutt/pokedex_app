@@ -36,7 +36,7 @@ function renderPokemonName(singlePokemonName, i, currentPokemon) {
         <div id="card${i}" onclick="showPokemonCard('${singlePokemonName}')" class="card">
             <div id="cardAbove${i}" class="cardAbove">
                 <div class="pokemonName"> <h2> ${singlePokemonName} </h2> </div>
-                <div class="textCenter mag-top-50"><b>#${pokemonId}</b></div>
+                <div class="textCenter mag-top-50" id="pokeId"><b>#${pokemonId}</b></div>
             </div>
 
             <div id="cardBelow${i}" class="cardBelow"> <div>
