@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PokeDex</title>
 
     <link rel="stylesheet" href="style.css">
-
+    <link rel="icon" href="img/pokemon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -32,16 +32,7 @@
 
     <div id="mainContainer" class="mainContainer"> </div>
 
-    <div id="overLay" class="overlay d-none" onclick="closeOverLay()">
-        <div id="pokemonCard" class="pokemonCard" onclick="stopPropagation(event)">
-            <div id="pokemonCardAbove" class="pokemonCardAbove"></div>
-
-            <div id="pokemonCardMiddle" class="pokemonCardMiddle"></div>
-
-
-            <div id="pokemonCardBelow" class="pokemonCardBelow"></div>
-        </div>
-    </div>
+    <div id="overLay" class="overlay d-none" onclick="closeOverLay()"></div>
 
     <div id="filterPokemon" class="filterPokemon d-none">
         <div id="filteredPokemonContainer" class="filteredPokemonContainer"></div>

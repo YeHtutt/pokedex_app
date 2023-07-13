@@ -126,6 +126,7 @@ h3 {
     justify-content: center;
     align-items: center;
     z-index: 5;
+    gap: 25px;
 }
 
 .pokemonCard {
@@ -354,6 +355,31 @@ h3 {
     height: 28px;
 }
 
+
+.forward-box img {
+    cursor: pointer;
+    border-radius: 100%;
+    filter: invert(75%);
+    filter: blur(40%);
+    filter: drop-shadow(50%);
+}
+
+.backward-box img {
+    cursor: pointer;
+    border-radius: 100%;
+    filter: invert(75%);
+    filter: blur(40%);
+    filter: drop-shadow(50%);
+}
+
+.forward-box img:hover {
+    filter: brightness(100%);
+}
+
+.backward-box img:hover {
+    filter: brightness(100%);
+}
+
 @media(max-width: 700px) {
     #pokeId {
         display: none;
@@ -392,6 +418,10 @@ h3 {
         width: 80vw;
         height: 90vh;
     }
+
+    .overlay {
+        gap: 0;
+    }
 }
 
 @media(max-width: 470px) {
@@ -416,7 +446,8 @@ h3 {
     }
 
     .pokemonCardBelow {
-        padding: 1px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     .singlePokemonImage {
@@ -426,15 +457,41 @@ h3 {
 
     .pokemonCardAbove {
         height: 24%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 
     .pokemonCardMiddle {
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
 
     .pokemonCard {
-        width: 80vw;
-        height: 80vh;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .overlay {
+        flex-direction: column;
+    }
+
+    .backward-box {
+        position: absolute;
+        bottom: 0;
+        left: 50px !important;
+        z-index: 6;
+    }
+
+    .forward-box {
+        position: absolute;
+        bottom: 0;
+        right: 50px !important;
+    }
+}
+
+@media(max-width: 370px) {
+    .progress-container {
+        width: 175px;
     }
 }
